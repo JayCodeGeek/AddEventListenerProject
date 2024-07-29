@@ -1,0 +1,125 @@
+::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+body{
+    font-family: "Mate SC", serif;
+    padding: 0;
+    margin: 0;
+    background-color: #10439F;
+}
+.header{
+    text-align: center;
+    height: 10vh;
+}
+h1{
+    font-size: 2.2rem;
+    padding-top: 5px;
+    margin: 0 auto;
+    position: relative;
+    width: max-content;
+    color: white;
+}
+h1:after{
+    content : "";
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    animation: slideDown 2s ease 0s 1 normal;
+    background: linear-gradient(45deg,cyan,yellow,orange);
+    left: 0%;
+    bottom: 0%;
+    border-radius: 5px;
+}
+.main{
+    font-size: 1.7rem;
+    display: grid;
+    margin-top: 70px;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(2,30vh);
+    text-align: center;
+   
+}
+.car{
+    margin-top: 50px;
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.carride{
+    height: 150px;
+    width: 380px;
+    display: block;
+}
+
+.carLeft{
+    animation: rightToLeft 5s ease 0s 1 normal;
+    opacity: 0;
+}
+.drive{
+    margin-top: 50px;
+    height: 20vh;
+    grid-column: span 2;
+    
+}
+button{
+    font-family: "Mate SC", serif;
+    font-size: 1.7rem;
+    border-radius: 30px;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    margin: 0 10px;
+}
+button:hover{
+    background: linear-gradient(45deg,cyan,lightgreen);
+}
+.footer{
+    text-align: center;
+    margin-top: 20px;
+}
+.footer p {
+    font-size: 1.7rem;
+    color: gold;
+    margin: 0;
+}
+a{
+    color: aliceblue;
+}
+a:hover{
+    font-weight: bold;
+}
+
+@keyframes rightToLeft {
+    from{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(-400%);
+        opacity: 0;
+    }
+}
+
+
+@keyframes slideDown {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 992px) {
+    .car img{
+        height: 120px;
+        width: 300px;
+    }
+}
+@media screen and (max-width:768px) {
+    .car img{
+        height: 80px;
+        width: 200px;
+    }
+}
